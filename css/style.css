@@ -1,0 +1,238 @@
+/*null*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside, section {
+  display: block;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+html, body {
+  color: #000;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*--------------------*/
+.line {
+  border-bottom: 1px solid rgb(195, 195, 195);
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shadow-light {
+  box-shadow: 1px 1px 1px 1px rgb(216, 215, 215);
+}
+
+.shadow-hard {
+  box-shadow: 2px 2px 3px 1px rgb(183, 183, 183);
+}
+
+.main {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  color: rgb(68, 68, 68);
+}
+
+.menu {
+  flex: 0 0 250px;
+  padding: 30px 15px;
+  background-color: rgb(255, 255, 255);
+}
+.menu h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+.menu .minu-line {
+  margin-bottom: 20px;
+}
+
+.menu-list li {
+  padding: 0 15px;
+}
+.menu-list li:hover {
+  background-color: rgb(195, 32, 86);
+  box-shadow: 1px 1px 1px rgb(216, 215, 215);
+}
+.menu-list li * {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 25px;
+  height: 40px;
+  width: 100%;
+  color: rgb(68, 68, 68);
+  background-size: 20px;
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+.menu-list .dashboard * {
+  background-image: url(../images/dashboard_gray.svg);
+}
+.menu-list .dashboard *:hover {
+  background-image: url(../images/dashboard_white.svg);
+}
+.menu-list .user-profile * {
+  background-image: url(../images/account_gray.svg);
+}
+.menu-list .user-profile *:hover {
+  background-image: url(../images/account_white.svg);
+}
+.menu-list .maps * {
+  background-image: url(../images/map_gray.svg);
+}
+.menu-list .maps *:hover {
+  background-image: url(../images/map_white.svg);
+}
+.menu-list .notifications * {
+  background-image: url(../images/notify_gray.svg);
+}
+.menu-list .notifications *:hover {
+  background-image: url(../images/notify_white.svg);
+}
+.menu-list .support * {
+  background-image: url(../images/support_gray.svg);
+}
+.menu-list .support *:hover {
+  background-image: url(../images/support_white.svg);
+}
+
+.content {
+  width: 100%;
+  padding: 30px;
+  background-color: rgb(234, 234, 234);
+}
+
+.head {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 25%;
+  margin: 30px;
+}
+.info-card .top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.info-card .logo-info {
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  position: relative;
+  top: -25px;
+}
+.info-card .text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: end;
+}
+.info-card .text-info-card-bottom {
+  font-size: 1.7rem;
+}
+.info-card .bottom {
+  font-size: 0.8rem;
+  padding-left: 18px;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: contain;
+}
+.info-card .alert {
+  background-image: url(../images/alert.png);
+}
+.info-card .logo-info-space {
+  background-color: rgb(68, 139, 0);
+  background-image: url(../images/data_white.svg);
+}
+.info-card .calendar {
+  background-image: url(../images/calendar.png);
+}
+.info-card .logo-info-revenue {
+  background-color: rgb(216, 161, 45);
+  background-image: url(../images/shop_white.svg);
+}
+.info-card .arrow {
+  background-image: url(../images/down.png);
+}
+.info-card .logo-info-problem {
+  background-color: rgb(39, 77, 151);
+  background-image: url(../images/tag_white.svg);
+}
+.info-card .airplane {
+  background-image: url(../images/time.png);
+}
+.info-card .logo-info-subscribers {
+  background-color: rgb(195, 32, 86);
+  background-image: url(../images/paperplane_white.svg);
+}/*# sourceMappingURL=style.css.map */

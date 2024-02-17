@@ -1,0 +1,205 @@
+@import "null.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+@mixin flexible() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin absolute-centering() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// переменные ---------------------------------------
+$color-hover: rgb(195, 32, 86);
+$color-text: rgb(68, 68, 68);
+$background-color-menu: rgb(255, 255, 255);
+$background-color-main: rgb(234, 234, 234);
+$color1: rgb(68,139,0);
+$color2: rgb(216,161,45);
+$color3: rgb(39,77,151);
+$color4: rgb(195, 32, 86);
+
+// набор классов -----------------------------------
+
+.line {
+  border-bottom: 1px solid rgb(195, 195, 195);
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shadow-light {
+  box-shadow: 1px 1px 1px 1px rgb(216, 215, 215);
+}
+
+.shadow-hard {
+  box-shadow: 2px 2px 3px 1px rgb(183, 183, 183);
+}
+
+.main {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  color: $color-text;
+}
+
+// меню -----------------------------
+.menu {
+  flex: 0 0 250px;
+  padding: 30px 15px;
+  background-color: $background-color-menu;
+  // position: absolute;
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-left: 15px;
+  }
+  .minu-line {
+    // как правильно сверстать разделитьель ?
+    margin-bottom: 20px;
+  }
+}
+
+// блок меню ------------------------------------
+.menu-list {
+  li {
+    padding: 0 15px;
+    &:hover {
+      background-color: $color-hover;
+      box-shadow: 1px 1px 1px rgb(216, 215, 215);
+    }
+    * {
+      display: inline-flex;
+      align-items: center;
+      padding-left: 25px;
+      height: 40px;
+      width: 100%;
+      color: $color-text;
+      background-size: 20px;
+      background-position: center left;
+      background-repeat: no-repeat;
+    }
+  }
+  .dashboard * {
+    background-image: url(../images/dashboard_gray.svg);
+  }
+  .dashboard *:hover {
+    background-image: url(../images/dashboard_white.svg);
+  }
+  .user-profile * {
+    background-image: url(../images/account_gray.svg);
+  }
+  .user-profile *:hover {
+    background-image: url(../images/account_white.svg);
+  }
+  .maps * {
+    background-image: url(../images/map_gray.svg);
+  }
+  .maps *:hover {
+    background-image: url(../images/map_white.svg);
+  }
+  .notifications * {
+    background-image: url(../images/notify_gray.svg);
+  }
+  .notifications *:hover {
+    background-image: url(../images/notify_white.svg);
+  }
+  .support * {
+    background-image: url(../images/support_gray.svg);
+  }
+  .support *:hover {
+    background-image: url(../images/support_white.svg);
+  }
+}
+//--------------------------------------------------------
+//--------------------------------------------------------
+
+//основной блок-----------------------------------------------
+.content {
+  width: 100%;
+  padding: 30px;
+  background-color: $background-color-main;
+}
+// шапка-----------------------------
+.head {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+// блок с информацией --------------------------------------
+
+.info-card {
+  padding: 10px;
+  background-color: $background-color-menu;
+  width: 25%;
+  margin: 30px;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .logo-info {
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    position: relative;
+    top: -25px;
+  }
+
+  .text-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: end;
+  }
+  .text-info-card-bottom {
+    font-size: 1.7rem;
+  }
+  .bottom {
+    font-size: .8rem;
+    padding-left: 18px;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+  }
+  .alert {
+    background-image: url(../images/alert.png);
+  }
+  .logo-info-space {
+    background-color: $color1;
+    background-image: url(../images/data_white.svg);
+  }
+  .calendar {
+    background-image: url(../images/calendar.png);
+  }
+  .logo-info-revenue {
+    background-color: $color2;
+    background-image: url(../images/shop_white.svg);
+  }
+  .arrow {
+    background-image: url(../images/down.png);
+  }
+  .logo-info-problem {
+    background-color: $color3;
+    background-image: url(../images/tag_white.svg);
+  }
+  .airplane {
+    background-image: url(../images/time.png);
+  }
+  .logo-info-subscribers {
+    background-color: $color4;
+    background-image: url(../images/paperplane_white.svg);
+
+  }
+}
