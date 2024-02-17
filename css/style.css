@@ -96,7 +96,7 @@ html, body {
 }
 
 .menu {
-  flex: 0 0 250px;
+  flex: 0 0 200px;
   padding: 30px 15px;
   background-color: rgb(255, 255, 255);
 }
@@ -168,14 +168,22 @@ html, body {
 .head {
   font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 25px;
 }
 
 .info-card {
   padding: 10px;
   background-color: rgb(255, 255, 255);
-  width: 25%;
-  margin: 30px;
+  text-wrap: nowrap;
 }
 .info-card .top {
   display: flex;
@@ -183,11 +191,11 @@ html, body {
   margin-bottom: 5px;
 }
 .info-card .logo-info {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 40px;
+  background-size: 30px;
   position: relative;
   top: -25px;
 }
@@ -235,4 +243,36 @@ html, body {
 .info-card .logo-info-subscribers {
   background-color: rgb(195, 32, 86);
   background-image: url(../images/paperplane_white.svg);
+}
+
+@media screen and (min-width: 800px) and (max-width: 950px) {
+  .info {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .info-card .text-info-card-top {
+    font-size: 0.8rem;
+  }
+  .info-card .text-info-card-bottom {
+    font-size: 1.3rem;
+  }
+  .info-card .logo-info {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .info {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .info {
+    grid-template-columns: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
