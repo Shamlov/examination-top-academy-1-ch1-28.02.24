@@ -178,6 +178,7 @@ html, body {
   -moz-column-gap: 15px;
        column-gap: 15px;
   row-gap: 25px;
+  margin-bottom: 40px;
 }
 
 .info-card {
@@ -245,6 +246,68 @@ html, body {
   background-image: url(../images/paperplane_white.svg);
 }
 
+.graphics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 25px;
+}
+
+.graphic-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+}
+.graphic-item .graphic-img {
+  margin-top: -40px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.graphic-item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+.graphic-item h2 {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  margin-bottom: 5px;
+}
+.graphic-item p {
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  margin-bottom: 5px;
+}
+.graphic-item p:last-of-type {
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+.graphic-item .text-info-time {
+  font-size: 0.8rem;
+  padding-left: 20px;
+  background-image: url(../images/time.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: contain;
+  margin-top: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.graphic-item-color1 {
+  background-color: rgb(68, 139, 0);
+}
+
+.graphic-item-color2 {
+  background-color: rgb(216, 161, 45);
+}
+
+.graphic-item-color3 {
+  background-color: rgb(39, 77, 151);
+}
+
 @media screen and (min-width: 800px) and (max-width: 950px) {
   .info {
     -moz-column-gap: 10px;
@@ -272,7 +335,20 @@ html, body {
   }
 }
 @media screen and (max-width: 500px) {
+  .graphics {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .graphics h2 {
+    font-size: 1.6rem;
+  }
   .info {
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
+  }
+  .info-card .text-info-card-top {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+  .info-card .text-info-card-bottom {
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
   }
 }/*# sourceMappingURL=style.css.map */

@@ -19,9 +19,9 @@ $color-hover: rgb(195, 32, 86);
 $color-text: rgb(68, 68, 68);
 $background-color-menu: rgb(255, 255, 255);
 $background-color-main: rgb(234, 234, 234);
-$color1: rgb(68,139,0);
-$color2: rgb(216,161,45);
-$color3: rgb(39,77,151);
+$color1: rgb(68, 139, 0);
+$color2: rgb(216, 161, 45);
+$color3: rgb(39, 77, 151);
 $color4: rgb(195, 32, 86);
 
 // набор классов -----------------------------------
@@ -142,9 +142,10 @@ $color4: rgb(195, 32, 86);
   grid-auto-rows: auto;
   column-gap: 15px;
   row-gap: 25px;
+  margin-bottom: 40px;
 }
 
-  // карточка маленькая ---------------------------------------
+// карточка маленькая ---------------------------------------
 .info-card {
   padding: 10px;
   background-color: $background-color-menu;
@@ -173,7 +174,7 @@ $color4: rgb(195, 32, 86);
     font-size: 1.7rem;
   }
   .bottom {
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding-left: 18px;
     margin-top: 10px;
     background-repeat: no-repeat;
@@ -209,36 +210,76 @@ $color4: rgb(195, 32, 86);
     background-image: url(../images/paperplane_white.svg);
   }
 }
-  //----------------------------------------------------------------
 //----------------------------------------------------------------
+// блок с графиками--------------------------------------------------------
+.graphics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  column-gap: 15px;
+  row-gap: 25px;
+}
+.graphic-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: $background-color-menu;
+  .graphic-img {
+    margin-top: -40px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
+  h2 {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: clamp(1rem, 2vw * 0.8, 1.3rem);
+    margin-bottom: 5px;
+  }
+  p:last-of-type {
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+  .text-info-time {
+    font-size: 0.8rem;
+    padding-left: 20px;
+    background-image: url(../images/time.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    margin-top: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
 
+.graphic-item-color1 {
+  background-color: $color1;
+}
+.graphic-item-color2 {
+  background-color: $color2;
+}
+.graphic-item-color3 {
+  background-color: $color3;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 800px) and (max-width: 950px)  {
+// ----------------------------------------------------------------
+//----------------------------------------------------------------
+@media screen and (max-width: 1000px) {
+}
+@media screen and (min-width: 800px) and (max-width: 950px) {
   .info {
     column-gap: 10px;
   }
   .info-card {
     .text-info-card-top {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
     .text-info-card-bottom {
       font-size: 1.3rem;
@@ -248,7 +289,6 @@ $color4: rgb(195, 32, 86);
       height: 40px;
     }
   }
-
 }
 @media screen and (max-width: 800px) {
   .info {
@@ -263,7 +303,22 @@ $color4: rgb(195, 32, 86);
 }
 
 @media screen and (max-width: 500px) {
+  .graphics {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
   .info {
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
+  }
+  .info-card {
+    .text-info-card-top {
+      font-size: clamp(1rem, 5vw, 1.5rem);
+    }
+    .text-info-card-bottom {
+      font-size: clamp(1.3rem, 5vw, 1.7rem);
+    }
   }
 }
