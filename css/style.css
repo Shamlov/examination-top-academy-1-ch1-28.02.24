@@ -308,6 +308,93 @@ html, body {
   background-color: rgb(39, 77, 151);
 }
 
+.tasks {
+  padding-top: 40px;
+}
+
+.tasks-block {
+  padding: 1px 20px 20px 20px;
+  background-color: rgb(255, 255, 255);
+}
+.tasks-block .task-row:not(:last-child) {
+  border-bottom: 1px solid rgb(195, 195, 195);
+}
+.tasks-block .tasks-block-menu {
+  margin-top: -20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(216, 161, 45);
+}
+.tasks-block .tasks-block-menu span {
+  margin-right: 20px;
+}
+.tasks-block .tasks-block-menu div {
+  background-position: 10px center;
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  padding: 10px 20px 10px 30px;
+}
+.tasks-block .tasks-block-menu div:hover {
+  background-color: rgba(255, 255, 255, 0.341);
+}
+.tasks-block .tasks-block-menu div:nth-child(2) {
+  background-image: url(../images/bug.svg);
+}
+.tasks-block .tasks-block-menu div:nth-child(3) {
+  background-image: url(../images/web.svg);
+}
+.tasks-block .tasks-block-menu div:nth-child(4) {
+  background-image: url(../images/cloud.svg);
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  max-height: 80px;
+  overflow: hidden;
+}
+.task-row > span:hover {
+  transform: scale(1.3);
+}
+.task-row input {
+  display: none;
+}
+.task-row label span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-image: url(../images/not-done.png);
+  background-size: cover;
+}
+.task-row input:checked + span {
+  background-image: url(../images/completed.png);
+}
+.task-row p {
+  flex-grow: 1;
+  padding: 0 10px;
+  align-self: self-start;
+}
+.task-row span {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform ease 0.2s;
+}
+.task-row .edit-task {
+  background-image: url(../images/edit.png);
+  margin-right: 10px;
+}
+.task-row .delete-task {
+  background-image: url(../images/remove.png);
+}
+
 @media screen and (min-width: 800px) and (max-width: 950px) {
   .info {
     -moz-column-gap: 10px;
