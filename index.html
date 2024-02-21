@@ -1,170 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="wrapper main">
-        <div class="menu shadow-hard">
-            <h2>Company</h2>
-            <div class="line minu-line"></div>
-            <ul class="menu-list ">
-                <li class="dashboard"><a href="#">Dashboard</a></li>
-                <li class="user-profile"><a href="">User Profile</a></li>
-                <li class="maps"><a href="">Maps</a></li>
-                <li class="notifications"><a href="">Notifications</a></li>
-                <li class="support"><a href="">Support</a></li>
-            </ul>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main wrapper">
+      <div class="menu shadow-hard">
+        <h2>Company</h2>
+        <div class="line minu-line"></div>
+        <ul class="menu-list">
+          <li class="dashboard"><a href="#">Dashboard</a></li>
+          <li class="user-profile"><a href="">User Profile</a></li>
+          <li class="maps"><a href="">Maps</a></li>
+          <li class="notifications"><a href="">Notifications</a></li>
+          <li class="support"><a href="">Support</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="head">
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <h1>Dashboard</h1>
         </div>
-        <div class="content">
-            <h1 class="head">Dashboard</h1>
-            <div class="info">
-                <div class="info-card shadow-hard">
-                    <div class="top">
-                        <div class="logo-info logo-info-space"></div>
-                        <div class="text-info">
-                            <p class="text-info-card-top">Used Spase</p>
-                            <p class="text-info-card-bottom">49/50GB</p>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="bottom alert">Get more space...</div>
-                </div>
-                <div class="info-card shadow-hard">
-                    <div class="top">
-                        <div class="logo-info logo-info-revenue"></div>
-                        <div class="text-info">
-                            <p class="text-info-card-top">Revenue</p>
-                            <p class="text-info-card-bottom">$ 43,254</p>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="bottom calendar">Last 24 Hours...</div>
-                </div>
-                <div class="info-card shadow-hard">
-                    <div class="top">
-                        <div class="logo-info logo-info-problem"></div>
-                        <div class="text-info">
-                            <p class="text-info-card-top">Fixed Issues</p>
-                            <p class="text-info-card-bottom">75</p>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="bottom arrow">Tracked from Github</div>
-                </div>
-                <div class="info-card shadow-hard">
-                    <div class="top">
-                        <div class="logo-info logo-info-subscribers"></div>
-                        <div class="text-info">
-                            <p class="text-info-card-top">Followers</p>
-                            <p class="text-info-card-bottom">+ 245</p>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <div class="bottom airplane">Just update</div>
-                </div>
-                
+
+        <div class="info">
+          <div class="info-card shadow-hard">
+            <div class="top">
+              <div class="logo-info logo-info-space"></div>
+              <div class="text-info">
+                <p class="text-info-card-top">Used Spase</p>
+                <p class="text-info-card-bottom">49/50GB</p>
+              </div>
             </div>
-            <div class="graphics">
-                <div class="graphic-item shadow-hard">
-                    <div class="graphic-img graphic-item-color1 shadow-light">
-                        <img src="images/graphics.svg" alt="">
-                    </div>
-                    <h2>Daily Sales</h2>
-                    <p>55% increase in today</p>
-                    <div class="line"></div>
-                    <div class="text-info-time">updated 4 minutes ago</div>
-                </div>
-                <div class="graphic-item shadow-hard">
-                    <div class="graphic-img graphic-item-color2 shadow-light">
-                        <img src="images/graphics.svg" alt="">
-                    </div>
-                    <h2>Email Subscriptions</h2>
-                    <p>Last Campaign</p>
-                    <p>Performance</p>
-                    <div class="line"></div>
-                    <div class="text-info-time">campaign sent 2 days ago</div>
-                </div>
-                <div class="graphic-item shadow-hard">
-                    <div class="graphic-img graphic-item-color3 shadow-light">
-                        <img src="images/graphics.svg" alt="">
-                    </div>
-                    <h2>Completed Tasks</h2>
-                    <p>Last Campaign</p>
-                    <p>Perfomance</p>
-                    <div class="line"></div>
-                    <div class="text-info-time">campaign event 2 days ago</div>
-                </div>
+            <div class="line"></div>
+            <div class="bottom alert">Get more space...</div>
+          </div>
+          <div class="info-card shadow-hard">
+            <div class="top">
+              <div class="logo-info logo-info-revenue"></div>
+              <div class="text-info">
+                <p class="text-info-card-top">Revenue</p>
+                <p class="text-info-card-bottom">$ 43,254</p>
+              </div>
             </div>
-            <div class="tasks">
-                <div class="tasks-block shadow-hard">
-                    <div class="tasks-block-menu shadow-light">
-                        <span>Tasks:</span>
-                        <div>Bugs</div>
-                        <div>Website</div>
-                        <div>Server</div>
-                    </div>
-                    <div class="task-row">
-                        <label>
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
-                        <p>Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor, 
-                        r, cr, sit amet consectetur
-                        Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor, 
-                        r, cr, sit amet consectetur 
-                        Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor, 
-                        r, cr, sit amet consectetur   </p>
-                        <span class="edit-task"></span>
-                        <span class="delete-task"></span>
-                    </div>
-                    <div class="task-row">
-                        <label>
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
-                        <p>Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,   </p>
-                        <span class="edit-task"></span>
-                        <span class="delete-task"></span>
-                    </div>
-                    <div class="task-row">
-                        <label>
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
-                        <p>Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor, 
-   sit amet consecor, sit amet consecteturLorem ipsum dolor,   </p>
-                        <span class="edit-task"></span>
-                        <span class="delete-task"></span>
-                    </div>
-                    <div class="task-row">
-                        <label>
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
-                        <p>Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor, 
-   sit amet consecor, sit amet consecteturLorem ipsum dolor,   </p>
-                        <span class="edit-task"></span>
-                        <span class="delete-task"></span>
-                    </div>
-                    <div class="task-row">
-                        <label>
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
-                        <p>Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor, 
-   sit amet consecor, sit amet consecteturLorem ipsum dolor,   </p>
-                        <span class="edit-task"></span>
-                        <span class="delete-task"></span>
-                    </div>
-                </div>
-                
-                
+            <div class="line"></div>
+            <div class="bottom calendar">Last 24 Hours...</div>
+          </div>
+          <div class="info-card shadow-hard">
+            <div class="top">
+              <div class="logo-info logo-info-problem"></div>
+              <div class="text-info">
+                <p class="text-info-card-top">Fixed Issues</p>
+                <p class="text-info-card-bottom">75</p>
+              </div>
             </div>
+            <div class="line"></div>
+            <div class="bottom arrow">Tracked from Github</div>
+          </div>
+          <div class="info-card shadow-hard">
+            <div class="top">
+              <div class="logo-info logo-info-subscribers"></div>
+              <div class="text-info">
+                <p class="text-info-card-top">Followers</p>
+                <p class="text-info-card-bottom">+ 245</p>
+              </div>
+            </div>
+            <div class="line"></div>
+            <div class="bottom airplane">Just update</div>
+          </div>
         </div>
+        <div class="graphics">
+          <div class="graphic-item shadow-hard">
+            <div class="graphic-img graphic-item-color1 shadow-light">
+              <img src="images/graphics.svg" alt="" />
+            </div>
+            <h2>Daily Sales</h2>
+            <p>55% increase in today</p>
+            <div class="line"></div>
+            <div class="text-info-time">updated 4 minutes ago</div>
+          </div>
+          <div class="graphic-item shadow-hard">
+            <div class="graphic-img graphic-item-color2 shadow-light">
+              <img src="images/graphics.svg" alt="" />
+            </div>
+            <h2>Email Subscriptions</h2>
+            <p>Last Campaign</p>
+            <p>Performance</p>
+            <div class="line"></div>
+            <div class="text-info-time">campaign sent 2 days ago</div>
+          </div>
+          <div class="graphic-item shadow-hard">
+            <div class="graphic-img graphic-item-color3 shadow-light">
+              <img src="images/graphics.svg" alt="" />
+            </div>
+            <h2>Completed Tasks</h2>
+            <p>Last Campaign</p>
+            <p>Perfomance</p>
+            <div class="line"></div>
+            <div class="text-info-time">campaign event 2 days ago</div>
+          </div>
+        </div>
+        <div class="tasks">
+          <div class="tasks-block shadow-hard">
+            <div class="tasks-block-menu shadow-light">
+              <span>Tasks:</span>
+              <div>Bugs</div>
+              <div>Website</div>
+              <div>Server</div>
+            </div>
+            <div class="task-row">
+              <label>
+                <input type="checkbox" />
+                <span></span>
+              </label>
+              <p>
+                Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem
+                ipsum dolor, sit amet consecteturLorem ipsum dolor, r, cr, sit
+                amet consectetur Lorem ipsum dolor, sit amet consecteturLorem
+                ipsum dolor,Lorem ipsum dolor, sit amet consecteturLorem ipsum
+                dolor, r, cr, sit amet consectetur Lorem ipsum dolor, sit amet
+                consecteturLorem ipsum dolor,Lorem ipsum dolor, sit amet
+                consecteturLorem ipsum dolor, r, cr, sit amet consectetur
+              </p>
+              <span class="edit-task"></span>
+              <span class="delete-task"></span>
+            </div>
+            <div class="task-row">
+              <label>
+                <input type="checkbox" />
+                <span></span>
+              </label>
+              <p>
+                Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem
+                ipsum dolor, sit amet consecteturLorem ipsum dolor,
+              </p>
+              <span class="edit-task"></span>
+              <span class="delete-task"></span>
+            </div>
+            <div class="task-row">
+              <label>
+                <input type="checkbox" />
+                <span></span>
+              </label>
+              <p>
+                Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem
+                ipsum dolor, sit amet consecteturLorem ipsum dolor, sit amet
+                consecor, sit amet consecteturLorem ipsum dolor,
+              </p>
+              <span class="edit-task"></span>
+              <span class="delete-task"></span>
+            </div>
+            <div class="task-row">
+              <label>
+                <input type="checkbox" />
+                <span></span>
+              </label>
+              <p>
+                Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem
+                ipsum dolor, sit amet consecteturLorem ipsum dolor, sit amet
+                consecor, sit amet consecteturLorem ipsum dolor,
+              </p>
+              <span class="edit-task"></span>
+              <span class="delete-task"></span>
+            </div>
+            <div class="task-row">
+              <label>
+                <input type="checkbox" />
+                <span></span>
+              </label>
+              <p>
+                Lorem ipsum dolor, sit amet consecteturLorem ipsum dolor,Lorem
+                ipsum dolor, sit amet consecteturLorem ipsum dolor, sit amet
+                consecor, sit amet consecteturLorem ipsum dolor,
+              </p>
+              <span class="edit-task"></span>
+              <span class="delete-task"></span>
+            </div>
+          </div>
+
+          <div class="employees-block shadow-hard">
+            <div class="employees-block-header">
+              <h3>Employees Stats</h3>
+              <p>New employees on 19th September, 2019</p>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Salary</th>
+                  <th>Country</th>
+                </tr>
+              </thead>
+              <tbody class="employees-table">
+                <tr>
+                  <td>1</td>
+                  <td>Dakota Rice</td>
+                  <td>$432,23</td>
+                  <td>Niger</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Dakota Rice</td>
+                  <td>$432,23</td>
+                  <td>Niger</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Dakota Rice</td>
+                  <td>$432,23</td>
+                  <td>Niger</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Dakota Rice</td>
+                  <td>$432,23</td>
+                  <td>Niger</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

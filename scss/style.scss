@@ -1,25 +1,13 @@
 @import "null.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
-@mixin flexible() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin absolute-centering() {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 // переменные ---------------------------------------
 $color-hover: rgb(195, 32, 86);
 $color-text: rgb(68, 68, 68);
+$color-text-light: rgb(240, 240, 240);
 $background-color-menu: rgb(255, 255, 255);
 $background-color-main: rgb(234, 234, 234);
-$color-line:rgb(195, 195, 195);
+$color-line: rgb(195, 195, 195);
 $color1: rgb(68, 139, 0);
 $color2: rgb(216, 161, 45);
 $color3: rgb(39, 77, 151);
@@ -47,16 +35,41 @@ $color4: rgb(195, 32, 86);
 
 .main {
   font-family: "Roboto", sans-serif;
-  display: flex;
   color: $color-text;
+  display: flex;
+  position: relative;
 }
+
+// бургер--------------------------------
+.hamburger-lines {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 2px;
+  cursor: pointer;
+  .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+  }
+}
+// ------------------------------------------------
 
 // меню -----------------------------
 .menu {
   flex: 0 0 200px;
+  height: 100vh;
   padding: 30px 15px;
   background-color: $background-color-menu;
-  // position: absolute;
+  position: sticky;
+  left: 0;
+  top: 0;
   h2 {
     font-size: 1.3rem;
     font-weight: 700;
@@ -64,7 +77,6 @@ $color4: rgb(195, 32, 86);
     padding-left: 15px;
   }
   .minu-line {
-    // как правильно сверстать разделитьель ?
     margin-bottom: 20px;
   }
 }
@@ -134,9 +146,9 @@ $color4: rgb(195, 32, 86);
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 40px;
+  position: relative;
 }
 // блок с информацией --------------------------------------
-
 .info {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -145,7 +157,6 @@ $color4: rgb(195, 32, 86);
   row-gap: 25px;
   margin-bottom: 40px;
 }
-
 // карточка маленькая ---------------------------------------
 .info-card {
   padding: 10px;
@@ -277,10 +288,15 @@ $color4: rgb(195, 32, 86);
 
 .tasks {
   padding-top: 40px;
+  display: flex;
+  column-gap: 20px;
 }
+
 .tasks-block {
+  flex-basis: 50%;
   padding: 1px 20px 20px 20px;
   background-color: $background-color-menu;
+  margin-bottom: 50px;
   .task-row:not(:last-child) {
     border-bottom: 1px solid $color-line;
   }
@@ -351,7 +367,7 @@ $color4: rgb(195, 32, 86);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    transition: transform ease .2s;
+    transition: transform ease 0.2s;
   }
   .edit-task {
     background-image: url(../images/edit.png);
@@ -363,8 +379,64 @@ $color4: rgb(195, 32, 86);
 }
 
 // ----------------------------------------------------------------
+// список сотрудников --------------------------------
+
+.employees-block {
+  padding: 1px 20px 20px 20px;
+  background-color: $background-color-menu;
+  flex-basis: 50%;
+  flex-shrink: 0;
+  table {
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+  }
+  th {
+    color: rgb(27, 146, 60);
+    font-weight: 400;
+    padding-bottom: 10px;
+  }
+}
+.employees-block-header {
+  margin-top: -20px;
+  padding: 20px;
+  background-color: $color3;
+  color: $color-text-light;
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+}
+.employees-table {
+  td {
+    border-top: 1px solid $color-line;
+    height: 30px;
+  }
+}
+
+// ----------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------
+
+@media screen and (min-width: 1000px) {
+  .tasks-block {
+    margin-bottom: 0;
+    .tasks-block-menu {
+      span {
+        margin-right: 10px;
+      }
+      div {
+        padding: 10px 5px 10px 30px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1000px) {
+  .tasks {
+    display: block;
+  }
 }
 @media screen and (min-width: 800px) and (max-width: 950px) {
   .info {
@@ -392,6 +464,13 @@ $color4: rgb(195, 32, 86);
 @media screen and (max-width: 650px) {
   .menu {
     display: none;
+  }
+  .hamburger-lines {
+    display: flex;
+  }
+  .head h1 {
+    font-size: 1.8rem;
+    margin-left: 30px;
   }
 }
 

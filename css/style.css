@@ -91,14 +91,38 @@ html, body {
 
 .main {
   font-family: "Roboto", sans-serif;
-  display: flex;
   color: rgb(68, 68, 68);
+  display: flex;
+  position: relative;
+}
+
+.hamburger-lines {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 0;
+  top: 2px;
+  cursor: pointer;
+}
+.hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
 }
 
 .menu {
   flex: 0 0 200px;
+  height: 100vh;
   padding: 30px 15px;
   background-color: rgb(255, 255, 255);
+  position: sticky;
+  left: 0;
+  top: 0;
 }
 .menu h2 {
   font-size: 1.3rem;
@@ -169,6 +193,7 @@ html, body {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .info {
@@ -310,11 +335,16 @@ html, body {
 
 .tasks {
   padding-top: 40px;
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .tasks-block {
+  flex-basis: 50%;
   padding: 1px 20px 20px 20px;
   background-color: rgb(255, 255, 255);
+  margin-bottom: 50px;
 }
 .tasks-block .task-row:not(:last-child) {
   border-bottom: 1px solid rgb(195, 195, 195);
@@ -395,6 +425,57 @@ html, body {
   background-image: url(../images/remove.png);
 }
 
+.employees-block {
+  padding: 1px 20px 20px 20px;
+  background-color: rgb(255, 255, 255);
+  flex-basis: 50%;
+  flex-shrink: 0;
+}
+.employees-block table {
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+.employees-block th {
+  color: rgb(27, 146, 60);
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.employees-block-header {
+  margin-top: -20px;
+  padding: 20px;
+  background-color: rgb(39, 77, 151);
+  color: rgb(240, 240, 240);
+}
+.employees-block-header h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.employees-table td {
+  border-top: 1px solid rgb(195, 195, 195);
+  height: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+  .tasks-block {
+    margin-bottom: 0;
+  }
+  .tasks-block .tasks-block-menu span {
+    margin-right: 10px;
+  }
+  .tasks-block .tasks-block-menu div {
+    padding: 10px 5px 10px 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .tasks {
+    display: block;
+  }
+}
 @media screen and (min-width: 800px) and (max-width: 950px) {
   .info {
     -moz-column-gap: 10px;
@@ -419,6 +500,13 @@ html, body {
 @media screen and (max-width: 650px) {
   .menu {
     display: none;
+  }
+  .hamburger-lines {
+    display: flex;
+  }
+  .head h1 {
+    font-size: 1.8rem;
+    margin-left: 30px;
   }
 }
 @media screen and (max-width: 500px) {
